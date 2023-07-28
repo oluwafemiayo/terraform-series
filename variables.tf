@@ -20,9 +20,13 @@ variable "instance_keypair" {
   default     = "terraform-key"
 }
 
-#AWS EC2 AMI
-# variable "instance_ami" {
-#   description = "EC2 Instance ami"
-#   type        = string
-#   default     = "ami-0905a3e5209c52e35"
-# }
+#AWS EC2 Instance type - Map
+variable "instance_type_map" {
+  description = "EC2 Instance type"
+  type        = map(string)
+  default     = {
+    "dev"     = "t2.micro"
+    "qa"      = "t3.small"
+    "prod"    = "t2.medium"
+  }
+}
