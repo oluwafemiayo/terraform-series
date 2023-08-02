@@ -6,7 +6,7 @@ output "instance_public_dns" {
 }
 
 
-#Ec2 Instance Public DNS #splat
+#Ec2 Instance Public DNS #splat * 
 output "instance_public_ip" {
   description = "Instance public IP address"
   value       = [for instance in aws_instance.ec2vm: instance.public_ip ]

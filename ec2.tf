@@ -11,5 +11,4 @@ resource "aws_instance" "ec2vm" {
   tags = {
     "Name"      = "RGF_Server-${each.key}"
   }
-  
 }
